@@ -1,0 +1,14 @@
+drop table tblCafe;
+
+create table tblCafe (
+    seqCafe NUMBER primary key,
+    title varchar2(50) NOT NULL,
+    address varchar2(40) NOT NULL,
+    menus varchar2(250) NOT NULL
+);
+
+drop sequence  seqCafe;
+create sequence seqCafe;
+
+
+select * from tblCafe;
