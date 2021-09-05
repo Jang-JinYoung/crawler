@@ -1,8 +1,8 @@
 package crawler;
 
-import crawler.api.DB;
-import crawler.model.Cafe;
 import crawler.api.Crawler;
+import crawler.api.DB;
+import crawler.model.Country;
 
 import java.util.ArrayList;
 
@@ -12,10 +12,10 @@ public class Main {
 
         System.out.println("프로그램시작");
         Crawler crawler = new Crawler();
-        ArrayList<Cafe> cafeList = crawler.crawler();
+        ArrayList<Country> countries = crawler.main();
         
-//        DB db = new DB();
-//        db.insert(cafeList);
+        DB db = new DB();
+        db.main(countries);
 
     }
 }

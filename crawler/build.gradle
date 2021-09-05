@@ -29,5 +29,10 @@ dependencies {
     
     //jsoup
     implementation 'org.jsoup:jsoup:1.13.1'
-    
+
+    //jsonparser
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //mysql jdbc
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
 }

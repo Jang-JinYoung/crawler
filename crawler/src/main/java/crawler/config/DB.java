@@ -13,15 +13,13 @@ public class DB {
      */
     public static Connection open() {
 
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
-        String id = "shs";
-        String pw = "1234";
+        String url = "jdbc:mysql://localhost:3306/nodejs?serverTimezone=Asia/Seoul";
+        String id = "root";
+        String pw = "wlsdud3301!";
         // 수정 테스트
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-
+            Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url, id, pw);
-
             return conn;
         } catch (Exception e) {
             System.out.println("DB.open()"+e);
