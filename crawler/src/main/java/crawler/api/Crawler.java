@@ -73,8 +73,9 @@ public class Crawler {
                 Document doc = Jsoup.connect(url).get();
                 //나라이름_한국어 + 나라이름_영국어
                 System.out.println(doc.select("dl.info_naflag dt").text());
-                String country[] = doc.select("dl.info_naflag dt").text().split(" ");
-                temp.setCountry_eng(country[1]);
+                String country = doc.select("dl.info_naflag dt").text();
+                String country_eng = country.replace(temp.getCountry_kr()+" ", "");
+                temp.setCountry_eng(country_eng);
 
                 //수도
                 String capital = doc.select("dl.info_naflag dd").first().text();
