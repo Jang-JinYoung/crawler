@@ -48,9 +48,7 @@ public class Crawler {
             }
         }
 
-        countries = crawler(countries);
-
-        return countries;
+        return crawler(countries);
 
     }
 
@@ -59,13 +57,14 @@ public class Crawler {
         ArrayList<Country> countryList = new ArrayList<>();
         try {
             for(int i=0; i<countries.size(); i++) {
+//            for(int i=0; i<30; i++) {
                 System.out.println(i + " " + countries.get(i).getCountry_kr());
 
                 //작업 시작
                 Country temp = countries.get(i);
 
                 String query = "";
-                if(i != 30)
+                if(i != 29)
                     query = countries.get(i).getCountry_kr() + " 국가정보";
                 else
                     query = query + countries.get(i).getCountry_kr();
@@ -112,7 +111,7 @@ public class Crawler {
                 temp.setLat(lat);
                 temp.setLng(lng);
 
-                countries.set(i, temp);
+                countryList.add(temp);
 
                 System.out.println(temp.toString());
                 System.out.println("---------------------------------------------------------------OK");
@@ -123,7 +122,7 @@ public class Crawler {
             e.printStackTrace();
         }
 
-        return countries;
+        return countryList;
 
 
     }

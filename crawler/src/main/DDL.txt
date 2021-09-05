@@ -1,0 +1,14 @@
+
+-- 나라 Table
+create table countryInfo
+(
+    id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    country_kr varchar(100) null, -- 나라이름(한국어)
+    country_eng varchar(100) null, -- 나라이름(영어)
+    capital varchar(100) null, -- 수도
+    continent varchar(100) null, -- 대륙
+    latitude      varchar(100) null, -- 위도
+    longitude      varchar(100) null, -- 경도
+    language varchar(100) null, -- 언어
+    image_path varchar(300) null -- 국기 이미지 주소
+);
